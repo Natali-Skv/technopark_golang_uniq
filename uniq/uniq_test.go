@@ -8,17 +8,7 @@ import (
 
 func TestUniqBasic(t *testing.T) {
 	const caseCount = 8
-	var optsTable = [caseCount]Options{
-		Options{},
-		Options{OutputFormat: Count},
-		Options{OutputFormat: Repeated},
-		Options{OutputFormat: Once},
-
-		Options{IgnoreCase: true},
-		Options{OutputFormat: Count, IgnoreCase: true},
-		Options{OutputFormat: Repeated, IgnoreCase: true},
-		Options{OutputFormat: Once, IgnoreCase: true},
-	}
+	var optsTable = [caseCount]Options{Options{}, Options{OutputFormat: Count}, Options{OutputFormat: Repeated}, Options{OutputFormat: Once}, Options{IgnoreCase: true}, Options{OutputFormat: Count, IgnoreCase: true}, Options{OutputFormat: Repeated, IgnoreCase: true}, Options{OutputFormat: Once, IgnoreCase: true}}
 
 	var testTable = []struct {
 		input    []string

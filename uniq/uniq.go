@@ -54,7 +54,7 @@ func skipFieldsChars(str string, numSkipFields int, numSkipChars int) string {
 	if numSkipFields >= 0 || beginIndex+numSkipChars-1 > len(str) {
 		return ""
 	}
-	return string(str[beginIndex-1+numSkipChars:])
+	return str[beginIndex-1+numSkipChars:]
 }
 
 func copySkipingFieldsCharsInSlice(strs []string, skipFields int, skipChars int) (resultStrs []string, err error) {
